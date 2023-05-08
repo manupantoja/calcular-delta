@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class baskara {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+
+		System.out.println("Informe os coeficiente a, b e c");
+
+		double a = input.nextDouble();
+		double b = input.nextDouble();
+		double c = input.nextDouble();
+		
+		double x1;
+		double x2;
+		
+		input.close();
+
+		double delta = Math.pow(b, 2) - 4 * a * c;
+
+		if (a == 0 || delta < 0) {
+			System.out.println("Esta equação nao possui raizes");
+		} else {
+
+			x1 = (-b + Math.sqrt(delta)) / (2 * a);
+			x2 = (-b - Math.sqrt(delta)) / (2 * a);
+			
+			System.out.println("""
+					
+					x1 = %.4f
+					x2 = %.4f
+					
+					""".formatted(x1,x2));
+
+		}
+		
+		
+	}
+
+}
+
